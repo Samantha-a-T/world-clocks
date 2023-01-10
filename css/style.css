@@ -1,25 +1,66 @@
-body{
-    background-color: antiquewhite;
+body {
+  background-color: rgb(249, 241, 232);
 }
-h1{
-    text-align: left;
+h1 {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
-
-.container{
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px rgb(0, 0, 0, .5);
-    margin-top: 30px;
-    background-image: url(/media/world-map.svg);
-   background-repeat: none;
-   background-position: center;
-   
-}
-.dropdown{
-    width: 300px;
-    margin-bottom: 40px;
-}
-footer{
-    text-align: center;
+h2 {
+  margin: 0;
+  font-size: 36px;
 }
 
+.container {
+  display: block;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.5);
+  background-image: url(/media/world-map.svg);
+  background-repeat: none;
+  background-size: 250%;
+  background-position: center;
+  background-color: white;
+}
+.dropdown {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.date {
+  margin: 0 0 20px;
+  font-size: 15px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgb(128, 128, 128, 0.5);
+}
+.city:last-child {
+  border: none;
+}
+.time {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.time-indicator {
+  font-size: 15px;
+  vertical-align: middle;
+  font-weight: 300;
+}
+
+footer {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+  color: rgb(0, 0, 0, 0.5);
+}
