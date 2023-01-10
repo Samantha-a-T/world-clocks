@@ -1,4 +1,21 @@
 
 h1{
+    text-align: left;
+}
+
+.container{
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, .5);
+    margin-top: 30px
+
+}
+.dropdown{
+    width: 300px;
+    margin-bottom: 40px;
+}
+footer{
     text-align: center;
 }
+
