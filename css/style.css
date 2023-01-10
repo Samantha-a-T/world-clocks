@@ -1,15 +1,19 @@
-
+body{
+    background-color: antiquewhite;
+}
 h1{
     text-align: left;
 }
 
 .container{
-    max-width: 400px;
-    border: 1px solid black;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgb(0, 0, 0, .5);
-    margin-top: 30px
-
+    margin-top: 30px;
+    background-image: url(/media/world-map.svg);
+   background-repeat: none;
+   background-position: center;
+   
 }
 .dropdown{
     width: 300px;
