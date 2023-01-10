@@ -26,8 +26,8 @@ function updateTime() {
       .format("A")}</span>`;
   }
 
-    let tokyoId = document.querySelector("#tokyo");
-      if (tokyoId) {
+  let tokyoId = document.querySelector("#tokyo");
+  if (tokyoId) {
     let tokyoDateElement = tokyoId.querySelector(".date");
     let tokyoTimeElement = tokyoId.querySelector(".time");
     tokyoDateElement.innerHTML = moment()
@@ -42,14 +42,16 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let updatedTimeZone = event.target.value;
-  if (updatedTimeZone === "current"){
-   updatedTimeZone =moment.tz.guess()
-  }
-  let cityName = updatedTimeZone.replace("_", " ").split("/")[1];
-  let cityTime = moment().tz(updatedTimeZone);
-  let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = `<div class="city" >
+  setInterval(() => {
+    let updatedTimeZone = event.target.value;
+    if (updatedTimeZone === "current") {
+      updatedTimeZone = moment.tz.guess();
+    }
+    let cityName = updatedTimeZone.replace("_", " ").split("/")[1];
+
+    let cityTime = moment().tz(updatedTimeZone);
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = `<div class="city" >
           <div>
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
@@ -58,7 +60,8 @@ function updateCity(event) {
             "h:mm:ss"
           )} <span class="time-indicator"> ${cityTime.format("A")}
     </span></div>
-        </div>`;
+        </div> <a href="/"> Back to all cities</a>`;
+  }, 1000);
 }
 
 updateTime();
